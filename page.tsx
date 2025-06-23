@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-pink-50 text-gray-800 p-6">
       <section className="text-center py-10">
-        <h1 className="text-4xl font-bold text-pink-600">Suika</h1>
+        <h1 className="text-4xl font-bold text-pink-600">Suika Dessert 🍰 </h1>
         <p className="mt-2 text-lg">Aneka dessert manis untuk harimu yang manis~</p>
         <Button className="mt-4 bg-pink-500 hover:bg-pink-600 text-white text-sm">Pesan Sekarang</Button>
       </section>
