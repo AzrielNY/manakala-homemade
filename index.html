@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -10,34 +11,79 @@
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body class="bg-pink-50 text-gray-800">
-
   <div id="root"></div>
 
   <script type="text/babel">
     function App() {
       const [menu] = React.useState([
-        { name: "Croissant Original", price: "Rp15.000", desc: "Croissant renyah klasik dengan aroma mentega." },
-        { name: "Croissant Strawberry & Cream", price: "Rp20.000", desc: "Isian krim stroberi segar. Varian: Choco, Vanilla, Matcha." },
-        { name: "Croissant Choco Almond", price: "Rp22.000", desc: "Lapisan cokelat dan taburan almond renyah." },
-        { name: "Croissant White Almond", price: "Rp22.000", desc: "Versi creamy dengan cokelat putih dan almond." },
-        { name: "Pudding", price: "Rp12.000", desc: "Varian: Mangga Keju, Cokelat, Karamel." },
-        { name: "Snow Milk Bun", price: "Rp14.000", desc: "Roti lembut dengan taburan gula salju dan krim susu." },
-        { name: "Fruit Sando", price: "Rp18.000", desc: "Roti lapis buah segar dan krim manis ala Jepang." },
-        { name: "Cromboloni", price: "Rp25.000", desc: "Croissant bomboloni unik. Varian: Vanilla, Tiramisu, Matcha, Cokelat." },
-        { name: "Mochi", price: "Rp8.000", desc: "Kue kenyal khas Jepang. Varian: original, strawberry." },
+        {
+          name: "Croissant Original",
+          price: "Rp15.000",
+          desc: "Croissant renyah klasik dengan aroma mentega.",
+          img: "https://via.placeholder.com/300x200?text=Croissant+Original"
+        },
+        {
+          name: "Croissant Strawberry & Cream",
+          price: "Rp20.000",
+          desc: "Isian krim stroberi segar. Varian: Choco, Vanilla, Matcha.",
+          img: "https://via.placeholder.com/300x200?text=Strawberry+Cream"
+        },
+        {
+          name: "Croissant Choco Almond",
+          price: "Rp22.000",
+          desc: "Lapisan cokelat dan taburan almond renyah.",
+          img: "https://via.placeholder.com/300x200?text=Choco+Almond"
+        },
+        {
+          name: "Croissant White Almond",
+          price: "Rp22.000",
+          desc: "Versi creamy dengan cokelat putih dan almond.",
+          img: "https://via.placeholder.com/300x200?text=White+Almond"
+        },
+        {
+          name: "Pudding",
+          price: "Rp12.000",
+          desc: "Varian: Mangga Keju, Cokelat, Karamel.",
+          img: "https://via.placeholder.com/300x200?text=Pudding"
+        },
+        {
+          name: "Snow Milk Bun",
+          price: "Rp14.000",
+          desc: "Roti lembut dengan taburan gula salju dan krim susu.",
+          img: "https://via.placeholder.com/300x200?text=Snow+Milk+Bun"
+        },
+        {
+          name: "Fruit Sando",
+          price: "Rp18.000",
+          desc: "Roti lapis buah segar dan krim manis ala Jepang.",
+          img: "https://via.placeholder.com/300x200?text=Fruit+Sando"
+        },
+        {
+          name: "Cromboloni",
+          price: "Rp25.000",
+          desc: "Croissant bomboloni unik. Varian: Vanilla, Tiramisu, Matcha, Cokelat.",
+          img: "https://via.placeholder.com/300x200?text=Cromboloni"
+        },
+        {
+          name: "Mochi",
+          price: "Rp8.000",
+          desc: "Kue kenyal khas Jepang. Varian: original, strawberry.",
+          img: "https://via.placeholder.com/300x200?text=Mochi"
+        }
       ]);
 
       return (
         <main className="min-h-screen p-6">
           <section className="text-center py-10">
-            <h1 className="text-4xl font-bold text-pink-600">Suika Dessert 🍰 </h1>
+            <h1 className="text-4xl font-bold text-pink-600">Suika Dessert 🍰</h1>
             <p className="mt-2 text-lg">Aneka dessert manis untuk harimu yang manis~</p>
             <button className="mt-4 bg-pink-500 hover:bg-pink-600 text-white py-2 px-4 rounded text-sm">Pesan Sekarang</button>
           </section>
 
           <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-8">
             {menu.map((item, idx) => (
-              <div key={idx} className="bg-white shadow-xl rounded p-4">
+              <div key={idx} className="bg-white shadow-xl rounded p-4 hover:scale-105 transition">
+                <img src={item.img} alt={item.name} className="w-full h-40 object-cover rounded mb-2" />
                 <h3 className="font-bold text-lg text-pink-600">{item.name}</h3>
                 <p className="text-sm mt-1">{item.desc}</p>
                 <p className="text-right mt-2 font-semibold">{item.price}</p>
